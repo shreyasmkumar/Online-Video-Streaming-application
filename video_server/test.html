@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dash.js Rocks haha</title>
+        <meta http-equiv="Cache-control" content="no-cache">
+    </head>
+    <body>
+        <div>
+            <video id="videoPlayer" controls="true"></video>
+        </div>
+	<script src="dash.all.min.js"></script>
+        <script>
+            (function(){
+                //setTimeout(function() { window.location.reload(true); }, 240000);
+                var url = "dash/output.mpd";
+		var url1 = "/output.mpd";
+		var player = dashjs.MediaPlayer().create();
+		//var context = new Dash.di.DashContext();
+                //var player = new MediaPlayer(context);
+                
+		//var StartTime  = player.getVideoModel().getElement().currentTime;
+                // uncomment this block if you want to change the buffer size that dash tries to maintain
+                //player.setBufferTimeAtTopQuality(60);
+                //player.setStableBufferTime(60);
+                //player.setBufferToKeep(60);
+                //player.setBufferPruningInterval(60);
+		//Player.getVideoModel().getElement().currentTime
+
+                //while ( player.getVideoModel().getElement().currentTime != StartTime + 10000 ) do
+		//	player.initialize(document.querySelector("#videoPlayer"), url1, true);
+                //player.initialize(document.querySelector("#videoPlayer"), true);
+		//player.attachView(document.querySelector("#videoPlayer"));
+                //player.attachSource(url);
+		//player.reset();
+
+		//player.attachView(document.querySelector("#videoPlayer"));
+                //player.attachSource(url1);
+
+		setTimeout(function() { player.attachSource(url1); }, 10000 );
+		//			player1.initialize(document.querySelector("#videoPlayer"),url1, true); }, 10000 );
+		
+		
+		//player.initialize(document.querySelector("#videoPlayer"),url1, true);
+		//setTimeout(function() {	player.attachView(document.querySelector("#videoPlayer"));
+                //			player.attachSource(url1);  }, 30000 );
+		//setTimeout(function() {  player.reset();
+		player.initialize(document.querySelector("#videoPlayer"),url, true);
+            })();
+        </script>
+    </body>
+</html>
